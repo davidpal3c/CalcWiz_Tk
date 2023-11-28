@@ -7,7 +7,7 @@ project_root = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(project_root)
 
 # Use absolute import
-from ..calc_operations import lst_operations as ls
+from calc_operations import lst_operations as ls
 
 # Rest of your code
 
