@@ -13,3 +13,5 @@ from calc_operations import lst_operations as ls
 
 # Print Log function
 print(ls.get_log_function([1, 3, 4, 5]), "\n")
+
+print(ls.get_sorted([34,2242,52,32525,872,72,435]))
