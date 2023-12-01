@@ -6,11 +6,8 @@ def get_sum(lst):
 
     return sum_total
 
-
-
 def get_average(lst):
     return sum(lst) / len(lst)
-
 
 def get_max(lst):
     max_val = float("-inf")      
@@ -33,7 +30,6 @@ def get_min(lst):
     min_val = min(lst)
 
     return min_val
-
 
 
 def get_sorted(lst):
