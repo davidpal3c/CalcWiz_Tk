@@ -1,3 +1,4 @@
+import math
 
 # 1. Power of each element
 def get_power_item(lst):
