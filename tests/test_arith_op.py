@@ -23,3 +23,4 @@ fruit_color = {"Mango": "f2c84b",
 
 print(ht_op.get_keys(fruit_quantity))
 print(ht_op.get_max(fruit_quantity))
+print(ht_op.has_key(fruit_quantity, "Avocado")) # returns boolean
