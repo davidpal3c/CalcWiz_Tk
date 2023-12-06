@@ -9,4 +9,4 @@ sys.path.append(project_root)
 # Use absolute import
 from calc_operations import arithmetic_op as arith_op
 
-
+print(arith_op.get_average([4352,3242, 352.23, 7257, 1230, 2302]))

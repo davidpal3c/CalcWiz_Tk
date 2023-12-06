@@ -9,7 +9,6 @@ sys.path.append(project_root)
 # Use absolute import
 from calc_operations import lst_operations as ls
 
-# Rest of your code
 
 # Print Log function
 print(ls.get_count([52,26324,324.3,2423]))
