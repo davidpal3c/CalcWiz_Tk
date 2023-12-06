@@ -11,3 +11,4 @@ from calc_operations import arithmetic_op as arith_op
 
 print(arith_op.get_average([4352,3242, 352.23, 7257, 1230, 2302]))
 print(arith_op.get_count([2, 3, 3, 3, 3, 4, 2]))
+print(arith_op.get_min([23, 14, 144, 22, 0.2]))
