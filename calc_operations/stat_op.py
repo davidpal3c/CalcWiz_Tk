@@ -26,11 +26,8 @@ def get_median(lst):
         median = (sorted_lst[n//2 -1] + sorted_lst[n//2]) / 2
 
     return median
-
-"""
 #    Standard Deviation
-def get_std_dev(lst):
-    std_dev = statistics.stdev(lst.values())
+def get_std_dev_lst(lst):
+    std_dev = statistics.stdev(lst)
     return std_dev
 
-"""
