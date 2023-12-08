@@ -1,6 +1,11 @@
-# Statistical Operations:
+import statistics
 
+# Statistical Operations:
 #    Mean
+def get_mean(lst):
+    mean = sum(lst.values()) / len(lst)
+    return mean
+
 
 #    Median
 def get_median(lst):
@@ -14,6 +19,8 @@ def get_median(lst):
 
     return median
 
-
 #    Standard Deviation
 
+def get_std_dev(lst):
+    std_dev = statistics.stdev(lst.values())
+    return std_dev
