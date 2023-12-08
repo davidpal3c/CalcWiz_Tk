@@ -8,7 +8,7 @@ sys.path.append(project_root)
 
 # Use absolute import
 from calc_operations import ht_op
-
+from calc_operations import stat_op
 
 fruit_quantity = {"Mango": 2.4,   
                "Strawyberry": 4,     
@@ -24,3 +24,5 @@ fruit_color = {"Mango": "f2c84b",
 print(ht_op.get_keys(fruit_quantity))
 print(ht_op.get_max(fruit_quantity))
 print(ht_op.has_key(fruit_quantity, "Avocado")) # returns boolean
+
+print(stat_op.get_mean_ht(fruit_quantity))
