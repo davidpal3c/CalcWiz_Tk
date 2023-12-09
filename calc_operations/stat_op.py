@@ -1,4 +1,5 @@
 import statistics
+import numpy as np
 
 # Statistical Operations:
 
@@ -15,8 +16,8 @@ def get_mean_ht(ht):
     mean = sum(ht.values()) / len(ht)
     return mean
 
-#    Median
-def get_median(lst):
+#    Median (lists)
+def get_median_lst(lst):
     sorted_lst = sorted(lst)
     n = len(sorted_lst)
 
@@ -26,8 +27,23 @@ def get_median(lst):
         median = (sorted_lst[n//2 -1] + sorted_lst[n//2]) / 2
 
     return median
-#    Standard Deviation
-def get_std_dev_lst(lst):
+
+# Median (hash tables)
+def get_median_ht(ht):
+    values = list(ht.values())
+    return get_median_lst(values)
+
+
+
+#    Standard Deviation (sample)
+def get_sample_std_dev_lst(lst):
     std_dev = statistics.stdev(lst)
     return std_dev
+
+#    Standard Deviation (population)
+def get_population_std_dev_lst(lst):
+    std_dev = np.std(lst)
+    return std_dev
+
+
 

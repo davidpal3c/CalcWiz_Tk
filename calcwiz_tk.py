@@ -1,8 +1,15 @@
 
 
-def console_menu():
-    print("This is the main menu")
+class Calculator:
+    def __init__(self):
+        self.data_handler = Data_Handler()
+        self.calc_operations = Calc_Operations()
+        self.file_io = FileIO()
+        self.user_interface = UserInterface()
 
+    def run(self):
+        # Main logic for running calcWiz
+        pass
 
 
 def main():

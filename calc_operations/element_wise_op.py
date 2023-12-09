@@ -1,5 +1,9 @@
 import math
 
+# Element-wise Operations: subset of arithmetic operations, as math operations 
+# performed on each element of array independently. 
+
+
 # 1. Power of each element
 def get_power_item(lst):
     result = []
@@ -45,7 +49,7 @@ def get_rounded_value(lst):
     return rounded_values
 
 
-
+# Matrix Multiplication (whole array_arithmetic)
 
 # Addition
 # Substraction

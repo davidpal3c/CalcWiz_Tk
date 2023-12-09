@@ -1,7 +1,8 @@
 from functools import reduce
 import math
 
-# Arithmetic Operations
+# Arithmetic Operations:  math operations performed on entire arrays or data structures
+
 
 # 1. Summation
 def get_sum(lst):
@@ -106,3 +107,6 @@ def get_add_constant(lst):
 
 # Element-wise Addition (+):
 # result = [x + y for x, y in zip(list1, list2)]
+
+
+# Matrix Multiplication (whole array_arithmetic)

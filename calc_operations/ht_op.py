@@ -18,7 +18,7 @@ def get_max(ht):
 
 def get_min(ht):
                                 # assume all values are int
-    mn = float("-inf")
+    mn = float("inf")
     for k, v in ht.items():
         if v < mn:
             mn = v
