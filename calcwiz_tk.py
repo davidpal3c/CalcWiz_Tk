@@ -9,6 +9,8 @@ class Calculator:
 
     def run(self):
         # Main logic for running calcWiz
+        user_input = self.user_interface.get_user_input()
+        numerical_input = self.data_handler.handle_numerical_input(user_input)
         pass
 
 
