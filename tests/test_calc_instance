@@ -1,3 +1,4 @@
+
 class CalculatorOperations:
     def __init__(self):
         # Initialize as needed
@@ -24,9 +25,6 @@ class CalculatorOperations:
         return result
 
 
-
-
-
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
 
@@ -38,3 +36,19 @@ except ValueError as e:
     print(f"ValueError: {e}")
 
     
+try:
+    # Test sorting a list
+    input_data = ('sort_list', [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+    result = calculator.list_operations(input_data)
+    print(f"Sorted List: {result}")
+
+    # Test filtering a list
+    def condition(x):
+        return x % 2 == 0
+
+    input_data = ('filter_list', [1, 2, 3, 4, 5, 6, 7, 8, 9], condition)
+    result = calculator.list_operations(input_data)
+    print(f"Filtered List: {result}")
+
+except ValueError as e:
+    print(f"ValueError: {e}")
