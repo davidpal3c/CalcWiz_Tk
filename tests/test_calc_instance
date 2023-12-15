@@ -8,6 +8,25 @@ class CalculatorOperations:
             raise ValueError("Input list cannot be None.")
         # Additional code for the function, if needed
 
+    
+    def list_operations(self, numerical_input):
+        # Assume numerical_input contains the operation type and operands
+        operation_type, operand_a, operand_b = numerical_input
+        # Perform various calculator operations based on user input
+        # Return the result of the calculations
+        if operation_type == 'sort_list':
+            result = get_sorted(operand_a)
+        elif operation_type == 'filter_list':
+            result = get_filtered_val(operand_a, operand_b) # Assuming operand is a tuple (list, condition)
+        else:
+            raise ValueError("Unsupported operation type")
+
+        return result
+
+
+
+
+
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
 
@@ -17,3 +36,5 @@ try:
     print("No ValueError was raised.")
 except ValueError as e:
     print(f"ValueError: {e}")
+
+    
