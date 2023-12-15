@@ -1,0 +1,19 @@
+class CalculatorOperations:
+    def __init__(self):
+        # Initialize as needed
+        pass
+    # Helper method to check if there's no input
+    def _check_input_list(self, input_list):
+        if input_list is None:
+            raise ValueError("Input list cannot be None.")
+        # Additional code for the function, if needed
+
+# Create an instance of the CalculatorOperations class
+calculator = CalculatorOperations()
+
+# Test the _check_input_list method with an empty list
+try:
+    calculator._check_input_list([])
+    print("No ValueError was raised.")
+except ValueError as e:
+    print(f"ValueError: {e}")

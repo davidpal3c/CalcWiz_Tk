@@ -2,10 +2,6 @@ import math
 
 # Exponential Function
 def get_exponential_func(lst):
-    # Check if the input list is not None
-    if lst is None:
-        raise ValueError("Input list cannot be None.")
-    # Calculate exponential values
     exponential_values = [math.exp(i) for i in lst]
     return exponential_values
 
