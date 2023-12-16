@@ -24,10 +24,15 @@ def get_slice(lst):
 
 
 # 4.	Filtering
+
+def get_filtered_val(input_list, condition):
+    return list(filter(condition, input_list))
+
+"""
 def get_filtered_val(lst):
     filtered_values = [i for i in lst if i > 9]
     return filtered_values
-
+"""
 
 # 5.	Checking for Palindrome
 def is_palindrome(lst):

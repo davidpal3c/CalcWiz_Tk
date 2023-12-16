@@ -1,0 +1,80 @@
+## Guiding Principles
+
+- Modularity: Divide your code into separate modules, each responsible for a specific aspect of the program.
+- Readability: Write clean, readable code with meaningful variable and function names. Use comments to explain complex parts of the code.
+- Reusability: Design functions to be reusable across different parts of the program. Consider making your functions generic and flexible.
+- Separation of Concerns: Each module should have a specific responsibility and not overlap with others. This allows for easier maintenance and debugging.
+- Error Handling: Implement error handling to deal with user input errors, file read/write issues, etc. Provide informative error messages.
+
+
+
+## Progressive development schema 
+
+Step 1: Refactor Existing Structure
+
+    Refactor Main Script (calculator.py):
+        Ensure it handles only command-line arguments and basic user input.
+        Call functions from the user_interface.py for user interaction.
+
+    Refactor Data Handling (data_handler.py):
+        Continue managing input and output of numerical values.
+        Ensure it remains focused on data-related operations.
+
+    Refactor Calculator Operations (calculator_operations.py):
+        Split it into two parts:
+            Basic operations (existing functions).
+            Placeholder for advanced operations (to be developed later).
+
+    Refactor File I/O (file_io.py):
+        Continue managing file read/write operations.
+        Keep using libraries like pandas for efficiency.
+
+    Refactor User Interface (user_interface.py):
+        Handle user input/output through the command line.
+        Call functions from other modules based on user input.
+
+Step 2: Introduce GUI
+
+    Introduce GUI Module (gui.py):
+        Create a module to interact with Tkinter.
+        Implement functions to display GUI elements for input and output.
+        Use event handling to connect GUI elements with backend functions.
+
+    Extend GUI for Save to File:
+        Extend the GUI module to include options for saving results to files.
+        Utilize the file_io module for file-related functionalities.
+
+Step 3: Advanced Calculator Operations
+
+    Expand Calculator Operations (calculator_operations.py):
+        Implement advanced operations on lists, tuples, and hash tables.
+        Consider sorting, filtering, and searching functionalities.
+
+Step 4: History and Memory
+
+    Implement History and Memory Feature:
+        Create a module (e.g., history.py) for storing and displaying a history of calculations.
+        Allow users to recall and reuse previous results in new calculations.
+
+Step 5: Unit Testing and Error Handling
+
+    Introduce Unit Testing:
+        Use unittest or pytest to test functions in each module.
+        Create test cases for both existing and new features.
+
+    Improve Error Handling:
+        Enhance error handling throughout the codebase.
+        Provide more informative error messages to the user.
+        Consider logging errors for future reference.
+
+Step 6: Documentation and Cleanup
+
+    Documentation:
+        Ensure each module and function is well-documented.
+        Provide clear comments explaining complex parts of the code.
+
+    Cleanup:
+        Remove redundant or unused code.
+        Optimize and refactor where necessary.
+        Ensure the codebase adheres to the guiding principles.
+
