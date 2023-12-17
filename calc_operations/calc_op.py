@@ -11,10 +11,7 @@ class CalculatorOperations:
             raise ValueError("Input list cannot be None.")
         
     def list_operations(self, numerical_input):
-        # Assume numerical_input contains the operation type and operands
-        operation_type, operand_a, operand_b = numerical_input
-        # Perform various calculator operations based on user input
-        # Return the result of the calculations
+        operation_type, operand_a, operand_b = (*numerical_input, None, None, None)[:3]       
         if operation_type == 'sort_list':
             result = get_sorted(operand_a)
         elif operation_type == 'filter_list':
@@ -23,7 +20,7 @@ class CalculatorOperations:
             raise ValueError("Unsupported operation type")
 
         return result
-    
+
     def hash_table_operations(self, numerical_input):
         # Assume numerical_input contains the operation type and operands
         operation_type, operand_a, operand_b = numerical_input

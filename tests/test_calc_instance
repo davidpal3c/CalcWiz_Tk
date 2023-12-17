@@ -7,7 +7,7 @@ project_root = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(project_root)
 
 # Use absolute import
-from calc_operations.lst_op import get_sorted, get_filtered_val
+from calc_operations.lst_op import get_sorted, get_filtered_val, get_index
 
 
 class CalculatorOperations:
@@ -63,5 +63,12 @@ try:
     result = calculator.list_operations(input_data)
     print(f"Filtered List: {result}")
 
+    # Test get index in list
+    input_data = ('get_index', [10, 20, 25, 30, 36], [3])
+    result = calculator.list_operations(input_data)
+    print(f"Index of list is: {result}")
+
+
 except ValueError as e:
     print(f"ValueError: {e}")
+

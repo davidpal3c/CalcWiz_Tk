@@ -9,9 +9,12 @@ def get_sorted(lst):
 
 
 # 2.	Finding Index
-def get_index(lst):
-    index = lst.index("banana")
-    return index
+def get_index(lst, value):
+    index = lst.index(value)
+    if index == -1:
+        return ValueError("Value not found in the list")
+    else:
+        return index
 
 
 # 3.	Slicing
