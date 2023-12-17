@@ -32,6 +32,8 @@ class CalculatorOperations:
         elif operation_type == 'filter_list':
             result = get_filtered_val(operand_a, operand_b) 
             # Assuming operand is a tuple (list, condition)
+        elif operation_type == 'get_index':
+            result = get_index(operand_a, operand_b)
         else:                                               
             raise ValueError("Unsupported operation type")
 
