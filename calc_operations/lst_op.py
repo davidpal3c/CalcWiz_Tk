@@ -18,12 +18,13 @@ def get_index(lst, value):
 
 
 # 3.	Slicing
-def get_slice(lst):
-    subset = lst[4:-1]
+def get_slice(lst, slice_params):
+    subset = lst[slice_params[0]: slice_params[1]]
     return subset 
 
 # A Slice is a way to extract a portion of a sequence
-# (list, tuple, or string)
+# (list, tuple, or string) through a slice parameter 
+# (a list containing two elements for start and stop positions) and returns the sliced list.
 
 
 # 4.	Filtering

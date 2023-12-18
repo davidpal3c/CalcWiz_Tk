@@ -7,7 +7,8 @@ project_root = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(project_root)
 
 # Use absolute import
-from calc_operations.lst_op import get_sorted, get_filtered_val, get_index
+from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
+
 
 
 class CalculatorOperations:
@@ -34,6 +35,8 @@ class CalculatorOperations:
             # Assuming operand is a tuple (list, condition)
         elif operation_type == 'get_index':
             result = get_index(operand_a, operand_b)
+        elif operation_type == 'slice_list':
+            result = get_slice(operand_a, operand_b)
         else:                                               
             raise ValueError("Unsupported operation type")
 
@@ -65,11 +68,15 @@ try:
     result = calculator.list_operations(input_data)
     print(f"Filtered List: {result}")
 
-    # Test get index in list
-    input_data = ('get_index', [10, 20, 25, 30, 36], [3])
+    # Test getting index in list
+    input_data = ('get_index', [10, 20, 25, 30, 36], 24)
     result = calculator.list_operations(input_data)
     print(f"Index of list is: {result}")
 
+    # Test slicing a list
+    input_data = ('slice_list', [1, 2, 3, 5, 8, 13, 21, 34], [2, 13])
+    result = calculator.list_operations(input_data)
+    print(f"Sliced List: {result}")
 
 except ValueError as e:
     print(f"ValueError: {e}")
