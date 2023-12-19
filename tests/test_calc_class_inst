@@ -8,8 +8,7 @@ sys.path.append(project_root)
 
 # Use absolute import
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
-
-
+from calc_operations.stat_op import get_lst_mean, get_ht_mean
 
 class CalculatorOperations:
     def __init__(self):
@@ -33,7 +32,7 @@ class CalculatorOperations:
         elif operation_type == 'filter_list':
             result = get_filtered_val(operand_a, operand_b) 
             # Assuming operand is a tuple (list, condition)
-        elif operation_type == 'get_index':
+        elif operation_type == 'index_list':
             result = get_index(operand_a, operand_b)
         elif operation_type == 'slice_list':
             result = get_slice(operand_a, operand_b)
@@ -42,6 +41,14 @@ class CalculatorOperations:
 
         return result
 
+    def stat_operations(self, numerical_input):
+        operation_type, operand_a, operand_b = (*numerical_input, None, None, None)[:3]
+        if operation_type == 'mean_list':
+            result = get_lst_mean(operand_a)
+        else:
+            raise ValueError("Unsupported operation type")
+
+        return result
 
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
@@ -69,7 +76,7 @@ try:
     print(f"Filtered List: {result}")
 
     # Test getting index in list
-    input_data = ('get_index', [10, 20, 25, 30, 36], 24)
+    input_data = ('index_list', [10, 20, 25, 30, 36], 25)
     result = calculator.list_operations(input_data)
     print(f"Index of list is: {result}")
 
@@ -85,3 +92,12 @@ try:
 except ValueError as e:
     print(f"ValueError: {e}")
 
+
+try: 
+    # Test mean of list
+    input_data = ('mean_list', [213, 324.3, 7124, 332.23, 403])
+    result = calculator.stat_operations(input_data)
+    print(f"Mean of List: {result}")
+
+except ValueError as e:
+    print(f"Value error: {e}")

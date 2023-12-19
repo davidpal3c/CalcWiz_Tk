@@ -4,20 +4,20 @@ import numpy as np
 # Statistical Operations:
 
 #    Mean
-def get_mean_lst(lst):
-    # Check if hash table is not empty to avoid division by zero
+def get_lst_mean(lst):
+    # Check if list is not empty to avoid division by zero
     if len(lst) == 0:
         return None # choose to handle empty list some other way later
     mean = sum(lst) / len(lst)
     return mean
 
 
-def get_mean_ht(ht):
+def get_ht_mean(ht):
     mean = sum(ht.values()) / len(ht)
     return mean
 
 #    Median (lists)
-def get_median_lst(lst):
+def get_lst_median(lst):
     sorted_lst = sorted(lst)
     n = len(sorted_lst)
 
@@ -29,9 +29,9 @@ def get_median_lst(lst):
     return median
 
 # Median (hash tables)
-def get_median_ht(ht):
+def get_ht_median(ht):
     values = list(ht.values())
-    return get_median_lst(values)
+    return get_lst_median(values)
 
 
 
