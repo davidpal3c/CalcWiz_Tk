@@ -8,7 +8,8 @@ sys.path.append(project_root)
 
 # Use absolute import
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
-from calc_operations.stat_op import get_lst_mean, get_ht_mean
+from calc_operations.stat_op import get_lst_mean, get_lst_median
+
 
 class CalculatorOperations:
     def __init__(self):
@@ -45,6 +46,9 @@ class CalculatorOperations:
         operation_type, operand_a, operand_b = (*numerical_input, None, None, None)[:3]
         if operation_type == 'mean_list':
             result = get_lst_mean(operand_a)
+        elif operation_type == 'median_list':
+            result = get_lst_median(operand_a)
+                    
         else:
             raise ValueError("Unsupported operation type")
 
@@ -98,6 +102,11 @@ try:
     input_data = ('mean_list', [213, 324.3, 7124, 332.23, 403])
     result = calculator.stat_operations(input_data)
     print(f"Mean of List: {result}")
+
+    # Test median of list
+    input_data = ('median_list',  [213, 324.3, 7124, 332.23, 403])
+    result = calculator.stat_operations(input_data)
+    print(f"Median of List: {result}")
 
 except ValueError as e:
     print(f"Value error: {e}")
