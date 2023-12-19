@@ -8,7 +8,7 @@ sys.path.append(project_root)
 
 # Use absolute import
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
-from calc_operations.stat_op import get_lst_mean, get_lst_median
+from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
 
 
 class CalculatorOperations:
@@ -48,7 +48,10 @@ class CalculatorOperations:
             result = get_lst_mean(operand_a)
         elif operation_type == 'median_list':
             result = get_lst_median(operand_a)
-                    
+        elif operation_type == 'sample_standard_deviation':
+            result = get_sample_std_dev_lst(operand_a)               
+        elif operation_type == 'population_standard_deviation': 
+            result = get_population_std_dev_lst(operand_a)                   
         else:
             raise ValueError("Unsupported operation type")
 
@@ -107,6 +110,17 @@ try:
     input_data = ('median_list',  [213, 324.3, 7124, 332.23, 403])
     result = calculator.stat_operations(input_data)
     print(f"Median of List: {result}")
+
+    # Test Sample standard deviation of list:
+    input_data = ('sample_standard_deviation', [213, 324.3, 7124, 332.23, 403])
+    result = calculator.stat_operations(input_data)
+    print(f"Standard Deviation (Sample) of List: {result}")
+
+    # Test Sample standard deviation of list:
+    input_data = ('population_standard_deviation', [213, 324.3, 7124, 332.23, 403])
+    result = calculator.stat_operations(input_data)
+    print(f"Standard Deviation (Population) of List: {result}")
+
 
 except ValueError as e:
     print(f"Value error: {e}")
