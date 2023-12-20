@@ -21,5 +21,5 @@ print(f"Mean: {stat_op.get_mean_lst([24, 35, 23, 21.4, 41,25.1])}")
 print(f"Median: {stat_op.get_median_lst([30, 40, 50, 60])}")
 print(f"Median (hash table): {stat_op.get_mean_ht(dictionary_1)}")
 
-print(f"Standard Deviation (sample): {stat_op.get_sample_std_dev([140, 230, 510, 728, 102])}")
+print(f"Standard Deviation (sample): {stat_op.get_sample_std_dev_lst([140, 230, 510, 728, 102])}")
 print(f"Standard Deviation (population): {stat_op.get_population_std_dev_lst([140, 230, 510, 728, 102])}")
