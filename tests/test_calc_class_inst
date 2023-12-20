@@ -61,7 +61,9 @@ class CalculatorOperations:
         operation_type, operand_a, operand_b = (*numerical_input, None, None, None)[:3]
         if operation_type == 'sum_list':
             result = get_sum(operand_a)
-        
+        elif operation_type == 'average_list':
+            result = get_average(operand_a)
+                
         else:
             raise ValueError("Unsupported operation type")
 
@@ -142,6 +144,11 @@ try:
     input_data = ('sum_list', [124124, 1312.324, 252614, 13, 223, 2352, 725, 564])
     result = calculator.arith_operations(input_data)
     print(f"Sum of list: {result}")
+
+    # Test average of list
+    input_data = ('average_list', [ 123, 321, 6146, 1132.32, 324, 972, 38, 93, 3707])
+    result = calculator.arith_operations(input_data)
+    print(f"Average of list: {result}")
 
 except ValueError as e:
     print(f"Value error: {e}")
