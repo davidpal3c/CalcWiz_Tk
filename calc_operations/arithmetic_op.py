@@ -23,7 +23,7 @@ def get_max(lst):
         if num > max_val:
             max_val = num
     
-    return mx
+    return max_val
 
     # If mn = float("inf"), Initializes mn to positive infinity. This ensures 
     # that any element in the list will be lower than this initial value.

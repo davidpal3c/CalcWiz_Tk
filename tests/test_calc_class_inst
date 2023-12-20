@@ -63,7 +63,8 @@ class CalculatorOperations:
             result = get_sum(operand_a)
         elif operation_type == 'average_list':
             result = get_average(operand_a)
-                
+        elif operation_type == 'max_list':
+            result = get_max(operand_a)        
         else:
             raise ValueError("Unsupported operation type")
 
@@ -149,6 +150,11 @@ try:
     input_data = ('average_list', [ 123, 321, 6146, 1132.32, 324, 972, 38, 93, 3707])
     result = calculator.arith_operations(input_data)
     print(f"Average of list: {result}")
+
+    # Test max of list
+    input_data = ('max_list', [23, 123, 15, 6114, 435, 6436, 253, 235])
+    result = calculator.arith_operations(input_data)
+    print(f"Max value of list: {result}")
 
 except ValueError as e:
     print(f"Value error: {e}")
