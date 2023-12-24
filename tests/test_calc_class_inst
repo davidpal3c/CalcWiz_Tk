@@ -68,6 +68,8 @@ class CalculatorOperations:
             result = get_max(operand_a)     
         elif operation_type == 'min_list':
             result = get_min(operand_a)   
+        elif operation_type == 'product_list':
+            result = get_product(operand_a)
         else:
             raise ValueError("Unsupported operation type")
 
@@ -164,6 +166,10 @@ try:
     result = calculator.arith_operations(input_data)
     print(f"Min value of list: {result}")
 
+    # Test product of list
+    input_data = ('product_list', [23, 123, 15, 6114, 435, 6436, 253, 235])
+    result = calculator.arith_operations(input_data)
+    print(f"Product of list: {result}")
 
 except ValueError as e:
     print(f"Value error: {e}")
