@@ -1,8 +1,12 @@
 import math
+from decimal import Decimal, getcontext
+
+# Set the precision to a sufficiently large value
+getcontext().prec=50
 
 # Exponential Function
 def get_exponential_func(lst):
-    exponential_values = [math.exp(i) for i in lst]
+    exponential_values = [Decimal(i).exp() for i in lst]
     return exponential_values
 
 
