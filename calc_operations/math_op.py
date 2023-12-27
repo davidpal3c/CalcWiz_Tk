@@ -2,11 +2,20 @@ import math
 from decimal import Decimal, getcontext
 
 # Set the precision to a sufficiently large value
-getcontext().prec=50
+getcontext().prec=80
 
 # Exponential Function
 def get_exponential_func(lst):
-    exponential_values = [Decimal(i).exp() for i in lst]
+    exponential_values = []
+    
+    for i in lst:
+        try:
+            exp_value = Decimal(str(i)).exp()
+            rounded_value = round(float(exp_value), 3)
+            exponential_values.append(rounded_value)
+        except decimal.InvalidOperation:
+            exponential_values.append(None)  # or handle as needed
+
     return exponential_values
 
 
