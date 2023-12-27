@@ -85,7 +85,8 @@ class CalculatorOperations:
         operation_type, operand_a, operand_b = (*numerical_input, None, None, None)[:3]
         if operation_type == 'exponential_function':
             return get_exponential_func(operand_a)
-        
+        elif operation_type == 'logarithmic_function':
+            return get_log_function(operand_a)
         else:
             raise ValueError("Unsupported operation type")
         
@@ -202,7 +203,12 @@ try:
     input_data = ('exponential_function', [23, 123, 15, 6114, 435, 6436, 253, 235])
     result = calculator.math_operations(input_data)
     print(f"Exponential function: {result}")
-          
+
+    # Test logarithmic function
+    input_data = ('logarithmic_function', [23, 123, 15, 6114, 435, 6436, 253, 235])
+    result = calculator.math_operations(input_data)
+    print(f"Logarithmic function (base 10): {result}")
+
 except ValueError as e:
     print(f"Value error: {e}")
 

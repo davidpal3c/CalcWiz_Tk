@@ -26,7 +26,7 @@ def get_exponential_func(lst):
 
 # Logarithmic Function
 def get_log_function(lst):
-    log_values = [math.log10(i) for i in lst]        # (base 10 log function)
+    log_values = [math.log10(i), for i in lst]        # (base 10 log function)
     return log_values
 
     # add the other log function (base)
