@@ -188,6 +188,7 @@ try:
     result = calculator.arith_operations(input_data)
     print(f"Product of list: {result}")
 
+    # Test occurrences of list
     input_data = ('list_count', [23, 123, 15, 6114, 435, 6436, 253, 235])
     result = calculator.arith_operations(input_data)
     print(f"Occurrences of list: {result}")
