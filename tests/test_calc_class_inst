@@ -10,7 +10,7 @@ sys.path.append(project_root)
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
 from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
 from calc_operations.arithmetic_op import get_sum, get_average, get_max, get_min, get_product, get_count, get_cumulative_sum, get_add_constant
-from calc_operations.math_op import get_exponential_func
+from calc_operations.math_op import get_exponential_func, get_sin_value
 
 
 class CalculatorOperations:
@@ -89,6 +89,8 @@ class CalculatorOperations:
             return get_exponential_func(operand_a)
         elif operation_type == 'logarithmic_function':
             return get_log_function(operand_a)
+        elif operation_type == 'sin_value':
+            return get_sin_value(operand_a)
         else:
             raise ValueError("Unsupported operation type")
         
@@ -216,6 +218,12 @@ try:
 
     # Test logarithmic function
 
+    # Test sin value
+    input_data = ('sin_value', [23, 123, 15, 6114, 435, 6436, 253, 235])
+    result = calculator.math_operations(input_data)
+    print(f"Sin value of list: {result}")
+
+    
 except ValueError as e:
     print(f"Value error: {e}")
 
