@@ -31,7 +31,14 @@ def get_exponential_func(lst):
 
 # Trigonometric Functions
 def get_sin_value(lst):
+    sin_values = [math.sin(math.radians(angle)) for angle in lst]
+    return sin_values
+
+
+# Sin value for single unit
+"""
+def get_sin_value(lst):
     angle = math.radians(lst)        #convert degrees to radians
     sin_value = math.sin(angle)
     return sin_value
-
+"""

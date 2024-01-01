@@ -219,11 +219,11 @@ try:
     # Test logarithmic function
 
     # Test sin value
-    input_data = ('sin_value', [23, 123, 15, 6114, 435, 6436, 253, 235])
+    input_data = ('sin_value', [235, 45, 180,33, 220 ])
     result = calculator.math_operations(input_data)
     print(f"Sin value of list: {result}")
 
-    
+
 except ValueError as e:
     print(f"Value error: {e}")
 
