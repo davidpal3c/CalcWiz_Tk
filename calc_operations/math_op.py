@@ -34,6 +34,9 @@ def get_sin_value(lst):
     sin_values = [math.sin(math.radians(angle)) for angle in lst]
     return sin_values
 
+def get_cos_value(lst):
+    cos_values = [math.cos(math.radians(angle)) for angle in lst]
+    return cos_values
 
 # Sin value for single unit
 """
