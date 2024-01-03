@@ -92,7 +92,7 @@ class CalculatorOperations:
         elif operation_type == 'sin_value':
             return get_sin_value(operand_a)
         elif operation_type == 'cos_value':
-            return get_cos_value(operand_b)
+            return get_cos_value(operand_a)
         else:
             raise ValueError("Unsupported operation type")
         
@@ -225,7 +225,7 @@ try:
     result = calculator.math_operations(input_data)
     print(f"Sin values of list: {result}")
 
-    # Tes cos value 
+    # Test cos value 
     input_data = ('cos_value', [235, 45, 180,33, 220 ])
     result = calculator.math_operations(input_data)
     print(f"Cos values of list: {result}")
