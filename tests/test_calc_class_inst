@@ -10,7 +10,7 @@ sys.path.append(project_root)
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
 from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
 from calc_operations.arithmetic_op import get_sum, get_average, get_max, get_min, get_product, get_count, get_cumulative_sum, get_add_constant
-from calc_operations.math_op import get_exponential_func, get_sin_value, get_cos_value
+from calc_operations.math_op import get_exponential_func, get_sin_value, get_cos_value, get_tan_value
 
 
 class CalculatorOperations:
@@ -93,6 +93,8 @@ class CalculatorOperations:
             return get_sin_value(operand_a)
         elif operation_type == 'cos_value':
             return get_cos_value(operand_a)
+        elif operation_type == 'tan_value':
+            return get_tan_value(operand_a)
         else:
             raise ValueError("Unsupported operation type")
         
@@ -229,6 +231,11 @@ try:
     input_data = ('cos_value', [235, 45, 180,33, 220 ])
     result = calculator.math_operations(input_data)
     print(f"Cos values of list: {result}")
+
+    # Test cos value 
+    input_data = ('tan_value', [235, 45, 180,33, 220 ])
+    result = calculator.math_operations(input_data)
+    print(f"Tan values of list: {result}")
 
 except ValueError as e:
     print(f"Value error: {e}")
