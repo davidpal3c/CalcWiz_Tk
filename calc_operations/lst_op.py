@@ -57,7 +57,7 @@ def get_multiplied_values(lst, lst2):
 
 def is_palindrome(lst):
     # Check if all elements in the list are comparable (e.g., not None)
-    if any(element is None for element in my_list):
+    if any(element is None for element in lst):
         raise ValueError("List contains non-comparable elements (e.g., None)")  
     
     return lst == lst[::-1]
