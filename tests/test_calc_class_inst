@@ -7,7 +7,7 @@ project_root = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(project_root)
 
 # Use absolute import
-from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice
+from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice, is_palindrome
 from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
 from calc_operations.arithmetic_op import get_sum, get_average, get_max, get_min, get_product, get_count, get_cumulative_sum, get_add_constant
 from calc_operations.math_op import get_exponential_func, get_sin_value, get_cos_value, get_tan_value
@@ -39,6 +39,8 @@ class CalculatorOperations:
             result = get_index(operand_a, operand_b)
         elif operation_type == 'slice_list':
             result = get_slice(operand_a, operand_b)
+        elif operation_type == 'is_palindrome':
+            result = is_palindrome(operand_a)
         else:                                               
             raise ValueError("Unsupported operation type")
 
@@ -129,6 +131,11 @@ try:
     input_data = ('index_list', [10, 20, 25, 30, 36], 25)
     result = calculator.list_operations(input_data)
     print(f"Index of list is: {result}")
+
+    # Test palindrome check
+    input_data = ('is_palindrome', [1,2,3,4,5,4,3,2,1])
+    result = calculator.list_operations(input_data)
+    print(f"List is Palindrome: {result}")
 
 except ValueError as e:
     print(f"ValueError: {e}")

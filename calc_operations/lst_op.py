@@ -55,7 +55,8 @@ def get_multiplied_values(lst, lst2):
     multiplied_vaues = [i * j for i, j in zip(lst, lst2)]
     return multiplied_vaues
 
-
+def is_palindrome(lst):
+    return lst == lst[::-1]
 
 
 
