@@ -23,7 +23,14 @@ class CalculatorOperations:
             raise ValueError("Input list cannot be None.")
         # Additional code for the function, if needed
 
-    
+    # Helper method to check if all elements in list are comparable (e.g. not None)
+    def _check_comparable_values(self, input_list):
+        if any(value is None for value in input_list):
+            raise ValueError("List contains non-comparable elements (e.g., None)")
+
+
+
+
     def list_operations(self, numerical_input):
         # Unpacking operator (*) to convert numerical_input into individual elements, adds None values 
         # and performs slice operation [:3] to take first three elements 
@@ -104,6 +111,20 @@ class CalculatorOperations:
     
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
+
+# Test ErrorChecking
+
+    # Uncomment the following line to test the TypeError case
+    # print(is_palindrome("not a list"))
+
+    # Uncomment the following line to test the ValueError case (empty list)
+    # print(is_palindrome([]))
+
+    # Uncomment the following line to test the ValueError case (None in the list)
+    # print(is_palindrome([1, 2, None, 2, 1]))
+
+
+
 
 # Test the _check_input_list method with an empty list
 try:

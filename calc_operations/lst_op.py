@@ -60,6 +60,7 @@ def is_palindrome(lst):
     if any(element is None for element in lst):
         raise ValueError("List contains non-comparable elements (e.g., None)")  
     
+    # Compare list with its reversed version
     return lst == lst[::-1]
 
 
