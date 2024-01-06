@@ -56,24 +56,15 @@ def get_multiplied_values(lst, lst2):
     return multiplied_vaues
 
 def is_palindrome(lst):
-    
+    # Check if input is a list
+    if not isinstance(lst, list):
+        raise TypeError("Input must be a list")
+
     # Check if all elements in the list are comparable (e.g., not None)
     if any(element is None for element in lst):
         raise ValueError("List contains non-comparable elements (e.g., None)")  
 
     # Compare list with its reversed version
     return lst == lst[::-1]
-
-
-
-
-
-
-
-
-
-
-
-
 
     

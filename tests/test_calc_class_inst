@@ -22,6 +22,18 @@ class CalculatorOperations:
         if input_list is None:
             raise ValueError("Input list cannot be None.")
         # Additional code for the function, if needed
+        
+    # Helper method to check if list is empty
+    def _check_empty_list(self, input_list):
+        # Check if input is empty
+        if not isinstance(input_list, list):
+            raise ValueError("Empty input")
+
+    # Helper method to check if input is a list
+    def _check_instanceType(self, input_list):
+        # Check if input is a list
+        if not isinstance(input_list, list):
+            raise TypeError("Input must be a list")
 
     
     def list_operations(self, numerical_input):
@@ -105,15 +117,32 @@ class CalculatorOperations:
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
 
-# Test the _check_input_list method with an empty list
+
+# Test the _check_input_list method with no input
 try:
     calculator._check_input_list([])
-    print("No ValueError was raised (due to empty list)")
+    print("No ValueError was raised.")
 
 except ValueError as e:
     print(f"ValueError: {e}")
 
-    
+# Test the _check_empty_list method with an empty list
+try:
+    calculator._check_empty_list([])
+    print("No ValueError was raised.")
+
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+
+# Test the _check_instance_list method with different data type
+try:
+    calculator._check_instanceType({})
+    print("No TypeError was Raised")
+except TypeError as e:
+    print(f"TypeError: {e}")
+
+        
 
 try:
     # Test sorting a list
