@@ -23,14 +23,7 @@ class CalculatorOperations:
             raise ValueError("Input list cannot be None.")
         # Additional code for the function, if needed
 
-    # Helper method to check if all elements in list are comparable (e.g. not None)
-    def _check_comparable_values(self, input_list):
-        if any(value is None for value in input_list):
-            raise ValueError("List contains non-comparable elements (e.g., None)")
-
-
-
-
+    
     def list_operations(self, numerical_input):
         # Unpacking operator (*) to convert numerical_input into individual elements, adds None values 
         # and performs slice operation [:3] to take first three elements 
@@ -112,28 +105,16 @@ class CalculatorOperations:
 # Create an instance of the CalculatorOperations class
 calculator = CalculatorOperations()
 
-# Test ErrorChecking
-
-    # Uncomment the following line to test the TypeError case
-    # print(is_palindrome("not a list"))
-
-    # Uncomment the following line to test the ValueError case (empty list)
-    # print(is_palindrome([]))
-
-    # Uncomment the following line to test the ValueError case (None in the list)
-    # print(is_palindrome([1, 2, None, 2, 1]))
-
-
-
-
 # Test the _check_input_list method with an empty list
 try:
     calculator._check_input_list([])
-    print("No ValueError was raised.")
+    print("No ValueError was raised (due to empty list)")
+
 except ValueError as e:
     print(f"ValueError: {e}")
 
     
+
 try:
     # Test sorting a list
     input_data = ('sort_list', [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
@@ -154,7 +135,7 @@ try:
     print(f"Index of list is: {result}")
 
     # Test palindrome check
-    input_data = ('is_palindrome', [1,2,3,4,5,4,3,2,1])
+    input_data = ('is_palindrome', [1,2,3,4,None,4,3,2,1])
     result = calculator.list_operations(input_data)
     print(f"List is Palindrome: {result}")
 
