@@ -32,7 +32,7 @@ class CalculatorOperations:
     # Helper method to check if input is a list
     def _check_instanceType(self, input_list):
         # Check if input is a list
-        if not isinstance(input_list, list):
+        if not isinstance(input_list, list): 
             raise TypeError("Input must be a list")
 
     
