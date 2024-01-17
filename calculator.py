@@ -1,3 +1,6 @@
+# Example in calculator.py
+# from data_handler import read_numeric_input
+from calc_operations import calc_op
 
 
 class Calculator:
@@ -14,10 +17,6 @@ class Calculator:
         result = self.calc_operations.perform_calculations(numerical_input)
         self.user_interface.display_output(result)
 
-
-# Example in calculator.py
-from data_handler import read_numeric_input
-from calcwiz_tk import CalculatorOperations
 
 def main():
     # Handle user input, either from CLI or other sources

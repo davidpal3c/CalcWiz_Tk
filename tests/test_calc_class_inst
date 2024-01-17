@@ -1,17 +1,27 @@
-import os
+"""import os
 import sys
 
 # Add the project's root directory to the Python path
 current_dir = os.path.dirname(__file__)
 project_root = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(project_root)
+sys.path.append(project_root)"""
 
 # Use absolute import
+
+
 from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice, is_palindrome
 from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
 from calc_operations.arithmetic_op import get_sum, get_average, get_max, get_min, get_product, get_count, get_cumulative_sum, get_add_constant
 from calc_operations.math_op import get_exponential_func, get_sin_value, get_cos_value, get_tan_value
 
+
+
+"""
+from calc_operations.lst_op import get_sorted, get_filtered_val, get_index, get_slice, is_palindrome
+from calc_operations.stat_op import get_lst_mean, get_lst_median, get_sample_std_dev_lst, get_population_std_dev_lst
+from calc_operations.arithmetic_op import get_sum, get_average, get_max, get_min, get_product, get_count, get_cumulative_sum, get_add_constant
+from calc_operations.math_op import get_exponential_func, get_sin_value, get_cos_value, get_tan_value
+"""
 
 class CalculatorOperations:
     def __init__(self):
